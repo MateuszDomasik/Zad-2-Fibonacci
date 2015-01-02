@@ -29,16 +29,13 @@ int main()
         cin >> liczba_uzytkownika;
         for(int i=1; i<=20; i++)
         {
-<<<<<<< HEAD
+
             if(liczba_uzytkownika<i) break;
             if(ciag_fibonacciego(i)==liczba_uzytkownika)
             {
                 if(liczba_uzytkownika<=13)
                     cout << silnia(liczba_uzytkownika);
-=======
-            if(ciag_fibonacciego(i)==liczba_uzytkownika)
-            {
->>>>>>> 6e0b6a49ae2945978fae2748256dda68548ae2d8
+
                 czy_robic=false;
                 break;
             }
@@ -46,11 +43,5 @@ int main()
     }
     while(czy_robic==true);
 
-<<<<<<< HEAD
-=======
-    if(liczba_uzytkownika<=13)
-        cout << silnia(liczba_uzytkownika);
-
->>>>>>> 6e0b6a49ae2945978fae2748256dda68548ae2d8
     return 0;
 }
