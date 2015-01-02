@@ -12,31 +12,45 @@ int ciag_fibonacciego(int n)
     else return ciag_fibonacciego(n-2) + ciag_fibonacciego(n-1);
 }
 
-int silnia(int n)
+long int silnia(int n)
 {
-    if(n==0) return 1;
+    if(n<2) return 1;
     else return n*silnia(n-1);
 }
 
 int main()
 {
     int liczba_uzytkownika;
-    cout << endl << " Podaj liczbe Fibonacciego: ";
-    cin >> liczba_uzytkownika;
+    bool czy_robic=true;
 
-    for(;;)
+    do
     {
-        if(ciag_fibonacciego(liczba_uzytkownika)==liczba_uzytkownika)
+        cout << endl << " Podaj liczbe Fibonacciego z przedzialu 1-7000: ";
+        cin >> liczba_uzytkownika;
+        for(int i=1; i<=20; i++)
         {
-            cout << "\n Silnia podanej liczby wynosi: " << silnia(liczba_uzytkownika) << endl;
-            break;
-        }
-        else
-        {
-            cout << "\n Nie dziala!"
-                << "\n\n Podaj ja jeszcze raz: ";
-                cin >> liczba_uzytkownika;
+<<<<<<< HEAD
+            if(liczba_uzytkownika<i) break;
+            if(ciag_fibonacciego(i)==liczba_uzytkownika)
+            {
+                if(liczba_uzytkownika<=13)
+                    cout << silnia(liczba_uzytkownika);
+=======
+            if(ciag_fibonacciego(i)==liczba_uzytkownika)
+            {
+>>>>>>> 6e0b6a49ae2945978fae2748256dda68548ae2d8
+                czy_robic=false;
+                break;
+            }
         }
     }
+    while(czy_robic==true);
+
+<<<<<<< HEAD
+=======
+    if(liczba_uzytkownika<=13)
+        cout << silnia(liczba_uzytkownika);
+
+>>>>>>> 6e0b6a49ae2945978fae2748256dda68548ae2d8
     return 0;
 }
